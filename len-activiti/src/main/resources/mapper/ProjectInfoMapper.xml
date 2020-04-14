@@ -36,4 +36,8 @@
         SELECT * FROM project_info where pm_id = #{pm_id}
     </select>
 
+    <select id="selectByEPGIdandState" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM project_info where epg_manager = #{user_id} and proj_state = '结束'
+    </select>
+
 </mapper>
