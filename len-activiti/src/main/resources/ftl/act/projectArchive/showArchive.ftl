@@ -22,110 +22,196 @@
     <form class="layui-form layui-form-pane" style="margin-left: 20px;" autocomplete="off">
         <div style="width:100%;height: 90%;overflow: auto;">
             <div class="layui-form-item">
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 12px;">
                     <legend style="font-size:16px;">输出资产标准列表</legend>
                 </fieldset>
             </div>
             <div class="layui-form-item">
-                <label for="proBasic" >
+                <label for="proBasic" class="layui-inline">
                     <span class="x-red">01.</span>项目基础数据表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proPro" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proPro" >
                     <span class="x-red">02.</span>项目提案书
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proQuo" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proQuo">
                     <span class="x-red">03.</span>项目报价书
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proEst" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proEst">
                     <span class="x-red">04.</span>项目估算表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proPlan" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proPlan">
                     <span class="x-red">05.</span>项目计划书
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proCut" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proCut">
                     <span class="x-red">06.</span>项目过程裁剪表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proCost" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proCost">
                     <span class="x-red">07.</span>项目成本管理表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proRequest" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proRequest">
                     <span class="x-red">08.</span>项目需求变更管理表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proRisk" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proRisk">
                     <span class="x-red">09.</span>项目风险管理表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="cusAccept" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="cusAccept">
                     <span class="x-red">10.</span>客户验收问题表
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="cusRepo" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="cusRepo">
                     <span class="x-red">11.</span>客户验收报告
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="proSummary" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proSummary">
                     <span class="x-red">12.</span>项目总结
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="expLes" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="expLes">
                     <span class="x-red">13.</span>最佳经验和教训
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="devTool" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="devTool">
                     <span class="x-red">14.</span>开发工具
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="devMod" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="devMod">
                     <span class="x-red">15.</span>开发模板（设计模板，测试模板）
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="staCheck" class="layui-form-label">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="staCheck">
                     <span class="x-red">16.</span>各阶段检查单
                     <input type="checkbox" name="check">
                 </label>
             </div>
             <div class="layui-form-item">
-                <label for="qaSum" class="layui-form-label">
+                <label for="proBasic" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
+                    <input type="checkbox" name="check">
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="qaSum">
                     <span class="x-red">17.</span>QA总结
                     <input type="checkbox" name="check">
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label for="proline" class="layui-inline">
+                    <span class="x-red">----------------------------------------------</span>
                 </label>
             </div>
         </div>
@@ -147,22 +233,20 @@
             $(".select .select-on").click();
         }
     };
-    layui.use('table', function () {
-        var table = layui.table;
-        table.on('tool(proj)', function (obj) {
-            var data = obj.data;
-            console.log("确定归档信息审核通过吗");
-            console.log(data + "\n${projectID}: " + ${projectID} +obj.event);
-            if (obj.event === 'pass_pro') {
-                approve_or_reject('确定归档信息审核通过吗？', 'proCheck', ${projectID});
-            }
-        });
-    });
+    //layui.use('table', function () {
+    //    var table = layui.table;
+    //    table.on('tool(proj)', function (obj) {
+    //       var data = obj.data;
+    //        console.log("确定归档信息审核通过吗");
+    //        console.log(data + "\n${projectID}: " + ${projectID} +obj.event);
+    //        if (obj.event === 'pass_pro') {
+    //            approve_or_reject('确定归档信息审核通过吗？', 'proCheck', ${projectID});
+    //        }
+     //   });
+    //});
     function approve_or_reject(alert_msg, url, projId) {
-        console.log("approve_or_reject");
         layui.use('layer', function () {
             var layer = layui.layer;
-            console.log("approve_or_reject-----------");
             layer.msg(alert_msg, {
                 time: 5000,//5秒自动关闭
                 btn: ['确定', '取消'],
@@ -190,8 +274,6 @@
             });
         });
     }
-
-
 </script>
 </body>
 </html>

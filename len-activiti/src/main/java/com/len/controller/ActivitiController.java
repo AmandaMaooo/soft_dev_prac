@@ -61,13 +61,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author zhuxiaomeng
- * @date 2018/1/13.
- * @email 154040976@qq.com
- *
- * 流程管理 流程创建、发布 流程节点绑定角色/用户(绑定用户 开始ing)
- */
 @Controller
 @RequestMapping(value = "/act")
 public class ActivitiController extends BaseController {
