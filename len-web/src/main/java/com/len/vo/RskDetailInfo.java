@@ -1,22 +1,19 @@
-package com.len.qo;
+package com.len.vo;
 
-import lombok.AllArgsConstructor;
+import com.len.entity.ProReUsr;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
 
-//查看风险信息-传回前端
-@AllArgsConstructor
-@ToString
+
+
+//添加风险识别-前端传回
 @Data
-public class RskDetail {
+public class RskDetailInfo {
 
     private String hId;
 
     private String pId;
-
-    private String pName;
 
     private String hType;
 
@@ -30,13 +27,7 @@ public class RskDetail {
 
     private String hState;
 
-    private int hFrequency;
-
     private String hManager;
 
     private String[] hMember;
-
-    private String hCreator;
-
-//    private List<String> pMember;
 }

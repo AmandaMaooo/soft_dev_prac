@@ -14,8 +14,8 @@
     <script type="text/javascript" src="${re.contextPath}/plugin/tools/tool.js" charset="utf-8"></script>
     <style>
         .layui-input {
-            height: 30px;
-            width: 120px;
+            /*height: 30px;*/
+            width: 300px;
         }
 
         .x-nav {
@@ -36,115 +36,118 @@
     <form class="layui-form layui-form-pane" style="margin-left: 20px;" autocomplete="off">
         <div style="width:100%;height: 90%;overflow: auto;">
             <div class="layui-form-item">
-                <label for="projname" class="layui-form-label">
+                <label for="hId" class="layui-form-label">
+                    风险编号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="hId" readonly name="hId" value="${riskDetail.HId}"
+                           class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="pName" class="layui-form-label">
                     项目名称
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="projName" readonly name="projName" value="${projectDetail.projName}"
+                    <input type="text" id="pName" readonly name="pName" value="${riskDetail.PName}"
                            class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <label for="projno" class="layui-form-label">
-                        项目编号
+                    <label for="hType" class="layui-form-label">
+                        风险类型
                     </label>
                     <div class="layui-input-inline">
-                        <input type="text" id="projNo" readonly name="projNo" class="layui-input"
-                               value="${projectDetail.projNo}">
+                        <input type="text" id="hType" readonly name="hType" class="layui-input" value="${riskDetail.HType}">
                     </div>
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <label for="pm_name" class="layui-form-label">
-                        项目经理
+                    <label for="hGrade" class="layui-form-label">
+                        风险级别
                     </label>
                     <div class="layui-input-inline">
-                        <input type="text" name="pmName" value="${projectDetail.pmName}" readonly class="layui-input">
+                        <input type="text" name="hGrade" value="${riskDetail.HGrade}" readonly class="layui-input">
                     </div>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label for="epg_leader" class="layui-form-label" style="width:130px;padding: 9px 0px;">
-                    EPG Leader
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" readonly value="${projectDetail.epgName}">
+                <div class="layui-inline">
+                    <label for="hInfluence" class="layui-form-label">
+                        风险影响度
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="hInfluence" name="hInfluence" value="${riskDetail.HInfluence}" readonly class="layui-input">
+                    </div>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label for="configManager" class="layui-form-label" style="width:130px;padding: 9px 0px;">
-                    配置管理员
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" readonly value="${projectDetail.confName}">
+                <div class="layui-inline">
+                    <label for="hState" class="layui-form-label">
+                        风险状态
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="hState" name="hState" value="${riskDetail.HState}" readonly class="layui-input">
+                    </div>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label for="qaManager" class="layui-form-label" style="width:130px;padding: 9px 0px;">
-                    QA
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" readonly value="${projectDetail.qaName}">
+                <div class="layui-inline">
+                    <label for="hFrequency" class="layui-form-label">
+                        追踪频度
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="hFrequency" name="hFrequency" value="${riskDetail.HFrequency}" readonly class="layui-input">
+                    </div>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label for="startDate" class="layui-form-label" style="width:130px;padding: 9px 0px;">
-                    预定日
+                <div class="layui-inline">
+                    <label for="hManager" class="layui-form-label">
+                        风险负责人
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="hManager" name="hManager" value="${riskDetail.HManager}" readonly class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label for="hMember" class="layui-form-label">
+                        风险相关者
+                    </label>
+                    <div class="layui-input-inline">
+                        <#list riskDetail.HMember as member>
+                            <input type="text" id="hMember" name="hMember" value="${member}" readonly class="layui-input">
+                        </#list>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="hDes" class="layui-form-label">
+                    风险描述
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" class="layui-input" id="d1" lay-verify="nnull" readonly>
+                    <textarea type="text" id="hDes" name="hDes"
+                              autocomplete="off" class="layui-textarea" readonly
+                              style="width:400px; height: 150px">${riskDetail.HDes}</textarea>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label for="end_date" class="layui-form-label" style="width:130px;padding: 9px 0px;">
-                    交付日
+                <label for="hTactics" class="layui-form-label">
+                    应对策略
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" class="layui-input" id="d1" lay-verify="nnull" readonly>
+                    <textarea type="text" id="hTactics" name="hTactics"
+                              class="layui-textarea" readonly
+                              style="width:400px; height: 150px">${riskDetail.HTactics}</textarea>
                 </div>
             </div>
-            <div class="layui-form-item">
-                <label for="milestone" class="layui-form-label">
-                    里程碑
-                </label>
-                <div class="layui-input-inline">
-                    <textarea type="text" id="milestone" name="milestone"
-                              autocomplete="off" class="layui-input-block" readonly
-                              style="width:400px; height: 150px">${projectDetail.milestone}</textarea>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="projTech" class="layui-form-label">
-                    主要技术
-                </label>
-                <div class="layui-input-inline">
-                    <textarea type="text" id="projTech" name="projTech"
-                              class="layui-input-block" readonly
-                              style="width:400px; height: 150px">${projectDetail.projTech}</textarea>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="projDomain" class="layui-form-label">
-                    领域
-                </label>
-                <div class="layui-input-inline">
-                    <textarea type="text" id="projDomain" name="projDomain"
-                              class="layui-input-block" readonly
-                              style="width:400px; height: 150px">${projectDetail.projDomain}</textarea>
-                </div>
-            </div>
-            <div class="layui-form-item" style="height: 20%; width: 80%">
-                <label for="projMainFunc" class="layui-form-label">
-                    主要功能
-                </label>
-                <div class="layui-input-inline">
-                    <textarea type="text" id="projMainFunc" name="projMainFunc"
-                              class="layui-input-block" readonly
-                              style="width:400px; height: 150px">${projectDetail.projMainFunc}</textarea>
-                </div>
-            </div>
+
             <div style="height: 60px"></div>
         </div>
     </form>
@@ -161,16 +164,18 @@
 <#--</script>-->
 
 <script>
-    layui.use(['form', 'laydate'], function () {
+    // console.log("ggg");
+    console.log("${riskDetail}");
+    layui.use(['form'], function () {
         var form = layui.form;
-        laydate.render({
-            elem: '#d1',
-            val: new Date(${projectDetail.startDate})
-        });
-        laydate.render({
-            elem: '#d2',
-            value: ${projectDetail.endDate}
-        });
+        <#--laydate.render({-->
+        <#--    elem: '#d1',-->
+        <#--    val: new Date(${projectDetail.startDate})-->
+        <#--});-->
+        <#--laydate.render({-->
+        <#--    elem: '#d2',-->
+        <#--    value: ${projectDetail.endDate}-->
+        <#--});-->
         form.render();
     });
 </script>
