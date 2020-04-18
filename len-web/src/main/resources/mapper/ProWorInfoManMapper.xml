@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.len.mapper.ProWorInfoManMapper">
+  <resultMap id="BaseResultMap" type="com.len.entity.ProWorInfoMan">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="pro_id" jdbcType="VARCHAR" property="proId" />
+    <result column="pro_name" jdbcType="VARCHAR" property="proName" />
+    <result column="pm_id" jdbcType="VARCHAR" property="pmId" />
+    <result column="pro_role_name" jdbcType="VARCHAR" property="proRoleName" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+  </resultMap>
+
+  <select id="selectByUId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM pro_wor_info_man where user_id = #{u_id}
+  </select>
+  <select id="selectByPId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM pro_wor_info_man where pro_id = #{p_id}
+  </select>
+</mapper>

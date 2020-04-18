@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.len.mapper.ProReUsrMapper">
+  <resultMap id="BaseResultMap" type="com.len.entity.ProReUsr">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="P_ID" jdbcType="VARCHAR" property="pId" />
+    <result column="U_ID" jdbcType="VARCHAR" property="uId" />
+    <result column="U_Name" jdbcType="VARCHAR" property="uName" />
+  </resultMap>
+
+  <select id="selectByUId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM pro_re_usr where U_ID = #{u_id}
+  </select>
+  <select id="selectByPId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM pro_re_usr where P_ID = #{p_id}
+  </select>
+</mapper>
