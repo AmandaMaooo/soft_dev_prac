@@ -3,7 +3,8 @@ package com.len.controller;
 import com.alibaba.fastjson.JSON;
 import com.len.core.annotation.Log;
 import com.len.core.shiro.Principal;
-import com.len.entity.ProReUsr;
+//import com.len.entity.ProReUsr;
+import com.len.entity.ProWorInfoMan;
 import com.len.entity.ProjectInfo;
 import com.len.entity.RskInfo;
 import com.len.entity.SysUser;
@@ -33,7 +34,7 @@ public class ProjectMemberController {
     private SysUserService userService;
 
     @Autowired
-    private ProReUsrService proReUsrService;
+    private ProWorInfoManService proWorInfoManService;
 
     @Autowired
     private RiskInfoService riskInfoService;
@@ -45,19 +46,23 @@ public class ProjectMemberController {
     @ResponseBody
     public ReType ProjectList() {
         List<ProjectMemberDetail> lists=new ArrayList<>();
-        List<ProReUsr> proReUsrList=proReUsrService.selectByUId(Principal.getPrincipal().getId());
+        List<ProWorInfoMan> proWorInfoManList=proWorInfoManService.selectByUId(Principal.getPrincipal().getId());
 
-        for(ProReUsr proReUsr: proReUsrList){
-            System.out.println("yilun:");
-            System.out.println(proReUsr.getpId());
-            ProjectInfo projectInfo = projectInfoService.selectByPrimaryKey(proReUsr.getpId());
+        for(ProWorInfoMan proWorInfoMan: proWorInfoManList){
+            System.out.println("一轮:");
+            System.out.println(proWorInfoMan.getProId());
+            ProjectInfo projectInfo = projectInfoService.selectByPrimaryKey(proWorInfoMan.getProId());
             System.out.println(projectInfo.getId());
-            List<ProReUsr> proReUsrs = proReUsrService.selectByPId(projectInfo.getId());
-            ProjectMemberDetail projectMemberDetail=new ProjectMemberDetail(
-                    projectInfo.getId(),projectInfo.getPmId(),projectInfo.getPmName(),projectInfo.getProjCustomer(),
-                    projectInfo.getProjName(),projectInfo.getProjNo(),projectInfo.getProjState(),proReUsrs
-                    );
-            lists.add(projectMemberDetail);
+
+            if(projectInfo.getProjState().equals("进行中")){
+                List<ProWorInfoMan> proWorInfoMans = proWorInfoManService.selectByPId(projectInfo.getId());
+
+                ProjectMemberDetail projectMemberDetail=new ProjectMemberDetail(
+                        projectInfo.getId(),projectInfo.getPmId(),projectInfo.getPmName(),projectInfo.getProjCustomer(),
+                        projectInfo.getProjName(),projectInfo.getProjNo(),projectInfo.getProjState(),proWorInfoMans
+                        );
+                lists.add(projectMemberDetail);
+            }
         }
 
         return new ReType(lists.size(), lists);
@@ -70,7 +75,7 @@ public class ProjectMemberController {
     public ReType MemberList(String riskId) {
         RskInfo rskInfo=riskInfoService.selectByPrimaryKey(riskId);
         System.out.println(JSON.toJSONString(rskInfo));
-        List<ProReUsr> lists = proReUsrService.selectByPId(rskInfo.getpId());
+        List<ProWorInfoMan> lists = proWorInfoManService.selectByPId(rskInfo.getpId());
 
         return new ReType(lists.size(), lists);
     }

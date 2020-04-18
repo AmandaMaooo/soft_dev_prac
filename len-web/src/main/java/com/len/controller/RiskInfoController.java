@@ -103,6 +103,7 @@ public class RiskInfoController {
     @GetMapping("showRiskList")
     @ResponseBody
     public ReType showRskList(Model model) {
+        //todo:改成项目参与者的风险列表
         System.out.println("showRsklist!!!!!!!!!!!!!:"+Principal.getPrincipal().getId());
         List<RskDetail> list=new ArrayList<>();
         List<ProjectInfo> proList = projectInfoService.selectByPmId(Principal.getPrincipal().getId());
@@ -154,16 +155,15 @@ public class RiskInfoController {
 
     @GetMapping("importRisk")
     public String importRisk() {
-//        List<ProjectInfo> l=projectInfoService.selectAll();
         return "rsk/import-risk";
     }
 
     @GetMapping("importSimilarRisk")
     public String importSimilarRisk(Model model,String proId) {
         //随便封装一个对象哈哈哈哈哈哈
-        ProReUsr proReUsr=new ProReUsr();
-        proReUsr.setpId(proId);
-        model.addAttribute("proReUsr", proReUsr);
+        ProWorInfoMan proWorInfoMan=new ProWorInfoMan();
+        proWorInfoMan.setProId(proId);
+        model.addAttribute("proWorInfoMan", proWorInfoMan);
         return "rsk/import-similar-risk";
     }
 

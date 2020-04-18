@@ -32,12 +32,12 @@
     layui.use(['table','form'], function () {
         $ = layui.jquery;
         var table = layui.table, form = parent.layui.form;
-        console.log('${proReUsr.pId}');
+        console.log('${proWorInfoMan.proId}');
         //方法级渲染
         table.render({
             id: 'riskImportList',
             elem: '#riskImportList'
-            , url: '/risk/importSimilarProRisk?proId=${proReUsr.pId}'
+            , url: '/risk/importSimilarProRisk?proId=${proWorInfoMan.proId}'
             , cols: [[
                 {field: 'hDes', title: '风险描述', width: '30%', sort: true}
                 , {field: 'hTactics', title: '应对策略', width: '50%'}

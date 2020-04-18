@@ -1,6 +1,7 @@
 package com.len.qo;
 
 import com.len.entity.ProReUsr;
+import com.len.entity.ProWorInfoMan;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -27,6 +28,6 @@ public class ProjectMemberDetail {
 
     private String projState;
 
-    private List<ProReUsr> projMember;
+    private List<ProWorInfoMan> projMember;
 
 }
